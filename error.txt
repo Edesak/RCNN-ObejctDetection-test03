@@ -1,0 +1,58 @@
+ERROR:root:Error processing image {'id': '29.jpg', 'source': 'object', 'path': 'E:/Datasets/RS3/Archeology/images\\train\\29.jpg', 'width': 1920, 'height': 1080, 'polygons': [[{'name': 'polygon', 'all_points_x': [719, 716, 685, 676, 683, 693, 719], 'all_points_y': [404, 372, 339, 353, 387, 414, 404]}], [{'name': 'polygon', 'all_points_x': [950, 985, 981, 973, 958, 949, 950], 'all_points_y': [571, 570, 535, 494, 494, 521, 571]}], [{'name': 'polygon', 'all_points_x': [1104, 1131, 1137, 1133, 1107, 1102, 1100, 1104], 'all_points_y': [626, 625, 583, 558, 563, 584, 619, 626]}], [{'name': 'polygon', 'all_points_x': [965, 989, 990, 958, 927, 965], 'all_points_y': [387, 379, 353, 336, 344, 387]}], [{'name': 'polygon', 'all_points_x': [732, 758, 763, 736, 708, 696, 693, 732], 'all_points_y': [324, 317, 296, 277, 278, 290, 312, 324]}], [{'name': 'polygon', 'all_points_x': [829, 848, 864, 881, 883, 864, 846, 829], 'all_points_y': [223, 239, 246, 238, 222, 216, 214, 223]}], [{'name': 'polygon', 'all_points_x': [1087, 1118, 1134, 1137, 1158, 1188, 1185, 1204, 1217, 1204, 1180, 1166, 1141, 1143, 1121, 1103, 1087], 'all_points_y': [516, 540, 552, 586, 591, 584, 550, 552, 525, 512, 503, 507, 494, 480, 482, 486, 516]}]], 'num_ids': [2, 2, 2, 1, 1, 1, 4]}
+Traceback (most recent call last):
+  File "C:\Users\Edesak\miniconda3\envs\tf-gpu\lib\site-packages\mask_rcnn-2.1-py3.7.egg\mrcnn\model.py", line 1709, in data_generator
+    use_mini_mask=config.USE_MINI_MASK)
+  File "C:\Users\Edesak\miniconda3\envs\tf-gpu\lib\site-packages\mask_rcnn-2.1-py3.7.egg\mrcnn\model.py", line 1212, in load_image_gt
+    mask, class_ids = dataset.load_mask(image_id)
+  File "E:/ProjectsPython/NeuralNetworkTraining/Scripts/RCNN/RCNNRS3.py", line 169, in load_mask
+    io.imshow(mask)
+  File "C:\Users\Edesak\miniconda3\envs\tf-gpu\lib\site-packages\skimage\io\_io.py", line 159, in imshow
+    return call_plugin('imshow', arr, plugin=plugin, **plugin_args)
+  File "C:\Users\Edesak\miniconda3\envs\tf-gpu\lib\site-packages\skimage\io\manage_plugins.py", line 209, in call_plugin
+    return func(*args, **kwargs)
+  File "C:\Users\Edesak\miniconda3\envs\tf-gpu\lib\site-packages\skimage\io\_plugins\matplotlib_plugin.py", line 158, in imshow
+    ax_im = ax.imshow(image, **kwargs)
+  File "C:\Users\Edesak\AppData\Roaming\Python\Python37\site-packages\matplotlib\__init__.py", line 1601, in inner
+    return func(ax, *map(sanitize_sequence, args), **kwargs)
+  File "C:\Users\Edesak\AppData\Roaming\Python\Python37\site-packages\matplotlib\cbook\deprecation.py", line 369, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Edesak\AppData\Roaming\Python\Python37\site-packages\matplotlib\cbook\deprecation.py", line 369, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Edesak\AppData\Roaming\Python\Python37\site-packages\matplotlib\axes\_axes.py", line 5671, in imshow
+    im.set_data(X)
+  File "C:\Users\Edesak\AppData\Roaming\Python\Python37\site-packages\matplotlib\image.py", line 690, in set_data
+    .format(self._A.shape))
+TypeError: Invalid shape (1080, 1920, 7) for image data
+Traceback (most recent call last):
+  File "E:/ProjectsPython/NeuralNetworkTraining/Scripts/RCNN/RCNNRS3.py", line 224, in <module>
+    train(model)
+  File "E:/ProjectsPython/NeuralNetworkTraining/Scripts/RCNN/RCNNRS3.py", line 212, in train
+    layers='heads',)
+  File "C:\Users\Edesak\miniconda3\envs\tf-gpu\lib\site-packages\mask_rcnn-2.1-py3.7.egg\mrcnn\model.py", line 2374, in train
+  File "C:\Users\Edesak\miniconda3\envs\tf-gpu\lib\site-packages\keras\legacy\interfaces.py", line 91, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Edesak\miniconda3\envs\tf-gpu\lib\site-packages\keras\engine\training.py", line 1658, in fit_generator
+    initial_epoch=initial_epoch)
+  File "C:\Users\Edesak\miniconda3\envs\tf-gpu\lib\site-packages\keras\engine\training_generator.py", line 181, in fit_generator
+    generator_output = next(output_generator)
+  File "C:\Users\Edesak\miniconda3\envs\tf-gpu\lib\site-packages\mask_rcnn-2.1-py3.7.egg\mrcnn\model.py", line 1709, in data_generator
+  File "C:\Users\Edesak\miniconda3\envs\tf-gpu\lib\site-packages\mask_rcnn-2.1-py3.7.egg\mrcnn\model.py", line 1212, in load_image_gt
+  File "E:/ProjectsPython/NeuralNetworkTraining/Scripts/RCNN/RCNNRS3.py", line 169, in load_mask
+    io.imshow(mask)
+  File "C:\Users\Edesak\miniconda3\envs\tf-gpu\lib\site-packages\skimage\io\_io.py", line 159, in imshow
+    return call_plugin('imshow', arr, plugin=plugin, **plugin_args)
+  File "C:\Users\Edesak\miniconda3\envs\tf-gpu\lib\site-packages\skimage\io\manage_plugins.py", line 209, in call_plugin
+    return func(*args, **kwargs)
+  File "C:\Users\Edesak\miniconda3\envs\tf-gpu\lib\site-packages\skimage\io\_plugins\matplotlib_plugin.py", line 158, in imshow
+    ax_im = ax.imshow(image, **kwargs)
+  File "C:\Users\Edesak\AppData\Roaming\Python\Python37\site-packages\matplotlib\__init__.py", line 1601, in inner
+    return func(ax, *map(sanitize_sequence, args), **kwargs)
+  File "C:\Users\Edesak\AppData\Roaming\Python\Python37\site-packages\matplotlib\cbook\deprecation.py", line 369, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Edesak\AppData\Roaming\Python\Python37\site-packages\matplotlib\cbook\deprecation.py", line 369, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Edesak\AppData\Roaming\Python\Python37\site-packages\matplotlib\axes\_axes.py", line 5671, in imshow
+    im.set_data(X)
+  File "C:\Users\Edesak\AppData\Roaming\Python\Python37\site-packages\matplotlib\image.py", line 690, in set_data
+    .format(self._A.shape))
+TypeError: Invalid shape (1080, 1920, 7) for image data
